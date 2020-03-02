@@ -5,7 +5,7 @@ module SessionsHelper
     end
 
     def admin?(user)
-        true if user.admin == "true"
+        true if user.admin
     end
 
 end
