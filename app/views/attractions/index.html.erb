@@ -1,0 +1,11 @@
+<ul><% @attractions.each do |att| %>
+
+    <li>
+    <%= link_to "#{prompt} #{att.name}", attraction_path(att) %>
+    </li>
+
+<% end %></ul>
+
+<% if admin?(current_user) %>
+    <%= link_to "New Attraction", new_attraction_path %>
+<% end %>

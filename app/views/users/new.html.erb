@@ -1,0 +1,15 @@
+NEW USER
+
+<%= form_for @user do |f| %>
+    <p>Name: <%= f.text_field :name %></p>
+    <p>Password: <%= f.text_field :password %></p>
+    <p>Nausea: <%= f.number_field :nausea %></p>
+    <p>Happiness: <%= f.number_field :happiness %></p>
+    <p>Tickets: <%= f.number_field :tickets %></p>
+    <p>Height: <%= f.number_field :height %></p>
+    <div>
+        <label for="user_admin">Check box if you are a theme park owner</label>
+        <input class="form-check-input" type="checkbox" value=true name="user[admin]" id="user_admin">
+    </div>
+    <br><%= f.submit %>
+<% end %>
